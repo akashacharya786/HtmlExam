@@ -15,32 +15,33 @@
 <body>
 <nav class="navbar navbar-light bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#" style="color: aliceblue;">
+    <a class="navbar-brand" href="index.html" style="color: aliceblue;">
       <img src="img/logo.png" alt="" width="30" height="30" class="d-inline-block align-text-top">
       Registration
     </a>
   </div>
 </nav>
-<form style="padding:30px 190px;" >
-    <div class="form-group" action="index.html" mathod="post" onclick="validation()" >
+<form style="padding:30px 190px;" method="post" action="home.html" onsubmit=" return validate()">
+    <div class="form-group">
         <label for="formGroupExampleInput" >User Id: </label>
         <input type="" class="form-control" id="formGroupExample1" required>
     </div>
     <br>
     <div class="form-group">
         <label for="username">Username:</label><br>
-        <input type="text" class="form-control" id="formGroupExample2" name="username" required>
+        <input type="text" class="form-control" id="formGroupExample2" minlength="6" name="username" required>
     </div>
     <br>
     <div class="form-group">
         <label for="password">Password:</label><br>
         <input type="password"  class="form-control" id="formGroupExample3" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name="password" required>
-    </div>
+        <div id="msg"></div>
+      </div>
     <br>
     <div id="formGroupExample3" class="error"></div>
     <div class="form-group">
     <label for="repeat-password">Repeat Password:</label><br>
-    <input type="password" id="formGroupExample4" class="form-control"pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name="repeat-password" required>
+    <input type="password" id="formGroupExample4" class="form-control"  name="repeat-password" required>
     </div>
     <br>
     <div id="repeat-password-error" class="error"></div>
@@ -56,11 +57,6 @@
     <br>
     <div class="form-group">
         <label for="education">Educational Qualification:</label>
-        <input type="text" id="education" class="form-control" name="education" required>
-    </div>
-    <br>
-    <div class="form-group">
-        <label for="education">Educational Qualification:</label>
         <input type="text" id="formGroupExample7" class="form-control" name="education" required>
         </div>
       <br>
@@ -72,6 +68,9 @@
       <input type="submit" class="btn btn-primary" value="submit" required>
     </form>
     <script src="a.js"></script>
+    <script src="validate.js"></script>
+    <script src="arr.js"></script>
     </script>
+
 </body>
 </html>
